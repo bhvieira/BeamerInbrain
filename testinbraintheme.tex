@@ -1,0 +1,132 @@
+\documentclass{beamer}
+
+\title[]{InBrain Beamer Template -- v 1.0}
+
+\author{Bruno Hebling Vieira}
+\institute[FFCLRP-USP]{
+InBrain Lab, Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto\\Universidade de São Paulo \\
+\medskip
+\textit{bruno.hebling.vieira@usp.br} \\
+\medskip
+\texttt{inbrainlab.com}
+}
+\date{\today}
+
+
+\usetheme{inbrain}
+
+
+\makeatletter
+    \newenvironment{withoutheadline}{
+        \setbeamertemplate{headline}[default]
+        \def\beamer@entrycode{\vspace*{-\headheight}}
+    }{}
+\makeatother
+
+
+\usepackage[style=authoryear,backend=bibtex8,doi=false,isbn=false,url=false,eprint=false]{biblatex}
+\renewbibmacro{in:}{}
+\AtEveryCitekey{%
+    \clearfield{volume}%
+    \clearfield{number}%
+    \clearfield{title}%
+    \clearfield{pages}}
+\addbibresource{C:/Users/bhebl/Documents/MendeleyBibTeX/library.bib}
+
+
+\begin{document}
+
+\begin{withoutheadline}
+    \begin{frame}
+    \titlepage % Print the title page as the first slide
+    \end{frame}
+\end{withoutheadline}
+
+%------------------------------------------------
+\section[Intro]{Introduction}
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Intelligence}
+
+    ``[\dots] the aggregate or global capacity of the individual to act purposefully, to think rationally and to deal effectively with his environment''\footnotemark[1]
+
+    
+    \begin{itemize}
+        \item It comprises several distinct aptitudes
+        \item Tests were developed to quantify intelligence, making it is possible to assess a score in a numerical cognitive scale
+    \end{itemize}
+
+    \footnotetext[1]{\fullcite{Wechsler1944}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{General Intelligence}
+    
+    \begin{itemize}
+        \item Since test scores tend to correlate positively (i.e. a positive manifold), this led to the development of theories on general intelligence, or ``g''\footnotemark[1]
+        \item ``G'' is an underlying factor that influences the overall cognitive performance of an individual and is latent to intelligence tests
+        \item It can be estimated from the factor analytic decomposition of  test scores from a population\footnotemark[2]
+    \end{itemize}
+
+    \footnotetext[1]{\fullcite{Spearman1904}}
+    \footnotetext[2]{\fullcite{Thurstone1940}}
+\end{frame}
+
+
+%------------------------------------------------
+\section[Methods]{Materials \& Methods}
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Materials \& Methods}
+
+    \begin{columns}[c]
+        \begin{column}{.4\textwidth}
+            \begin{itemize}
+                \item A
+                \item B
+                \item C
+            \end{itemize}
+        \end{column}
+        \begin{column}{.4\textwidth}
+            \begin{enumerate}
+                \item 1
+                \item 2
+                \item 3
+                \item 4
+            \end{enumerate}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+
+%------------------------------------------------
+\section[Conclusions]{Conclusions}
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Final remarks}
+
+    Carpe diem.
+
+\end{frame}
+
+%------------------------------------------------
+% Final slides
+%------------------------------------------------
+
+\begin{frame}
+    \centering
+    {\huge``É o InBrain ou não é?!''}
+    
+    J.H.O. Barbosa \textit{``InBrain Archives''}. 2012
+\end{frame}
+
+\begin{frame}
+    \centering
+    \Huge{Thank you!}
+\end{frame}
+
+\end{document}

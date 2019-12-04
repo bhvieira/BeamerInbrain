@@ -1,0 +1,86 @@
+\mode<presentation>
+
+\definecolor{AzulPrimario}{RGB}{16,148,171}
+\definecolor{AzulSecundario}{RGB}{100,196,210}
+\definecolor{Amarelo}{RGB}{252,180,33}
+
+\newcommand\Includegraphics[2][]{%https://tex.stackexchange.com/a/306615/105075
+  \raisebox{-.5\dimexpr\height-\ht\strutbox+\dp\strutbox}{\includegraphics[#1]{#2}}}
+
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=AzulPrimario}
+\setbeamercolor*{palette secondary}{use=structure,fg=black,bg=AzulSecundario}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=Amarelo}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+
+\setbeamercolor{item}{fg=AzulPrimario}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{block title}{bg=AzulPrimario,fg=white}
+\setbeamercolor{block body}{bg=AzulSecundario,fg=black}
+\setbeamercolor{titlelike}{bg=AzulPrimario,fg=white}
+\setbeamercolor{section in head/foot}{fg=white,bg=AzulSecundario}
+\setbeamercolor{structure}{fg=AzulPrimario}
+
+\setbeamertemplate{frametitle}{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=1.8em,wd=\paperwidth]{palette primary}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut
+        \hfill
+        \Includegraphics[width=0.1\framewidth]{InBrainFrametitle}
+        \vskip-0.8ex%
+    \end{beamercolorbox}
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.25ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.25ex,dp=0.5ex]{palette tertiary}%
+    \end{beamercolorbox}
+}
+
+\setbeamerfont{section in head/foot}{series=\bfseries}
+\setbeamertemplate{section in head/foot shaded}{%
+    \textnormal{\color{AzulSecundario}\usebeamertemplate{section in head/foot}}
+}
+
+\setbeamertemplate{headline}{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette primary}%
+        \insertsectionnavigationhorizontal{\paperwidth}{\hfill}{\hfill}
+    \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{%
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.25ex,dp=0.5ex]{palette tertiary}%
+    \end{beamercolorbox}
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.25ex,dp=0.5ex]{palette secondary}%
+    \end{beamercolorbox}
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.25ex,dp=1ex]{palette primary}%
+    \end{beamercolorbox}
+}
+
+\setbeamertemplate{section in toc}[square]
+
+\AtBeginSection[]
+{
+    \begin{frame}[noframenumbering]
+        \frametitle{Table of contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\setbeamercovered{transparent} 
+\setbeamerfont{footnote}{size=\scriptsize}
+
+
+\setbeamertemplate{navigation symbols}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\renewcommand*{\thefootnote}{\alph{footnote}}
+
+\mode<all>
