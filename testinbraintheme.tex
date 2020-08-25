@@ -16,14 +16,6 @@ InBrain Lab, Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto\\Univ
 \usetheme{inbrain}
 
 
-\makeatletter
-    \newenvironment{withoutheadline}{
-        \setbeamertemplate{headline}[default]
-        \def\beamer@entrycode{\vspace*{-\headheight}}
-    }{}
-\makeatother
-
-
 \usepackage[style=authoryear,backend=bibtex8,doi=false,isbn=false,url=false,eprint=false]{biblatex}
 \renewbibmacro{in:}{}
 \AtEveryCitekey{%
@@ -31,7 +23,7 @@ InBrain Lab, Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto\\Univ
     \clearfield{number}%
     \clearfield{title}%
     \clearfield{pages}}
-\addbibresource{C:/Users/bhebl/Documents/MendeleyBibTeX/library.bib}
+\addbibresource{library.bib}
 
 
 \begin{document}
