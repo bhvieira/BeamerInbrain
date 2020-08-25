@@ -65,7 +65,7 @@
 \AtBeginSection[]
 {
     \begin{frame}[noframenumbering]
-        \frametitle{Table of contents}
+        \frametitle{Índice}
         \tableofcontents[currentsection]
     \end{frame}
 }
@@ -82,5 +82,10 @@
 }
 
 \renewcommand*{\thefootnote}{\alph{footnote}}
+
+\newenvironment{withoutheadline}{
+    \setbeamertemplate{headline}[default]
+    \def\beamer@entrycode{\vspace*{-\headheight}}
+}{}
 
 \mode<all>
