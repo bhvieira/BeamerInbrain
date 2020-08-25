@@ -1,6 +1,11 @@
 # BeamerInbrain
 Beamer presentation template for presentations from the InBrain Lab (inbrainlab.com)
 
+Simply clone it and start working on your presentation:
+
+    git clone https://github.com/inbrainlab/BeamerInbrain.git your/folder
+
+
 This repository includes the following files:
 
 1. `InBrainFrametitle.png` - the lab logo, goes into the frame title of every frame that has one
